@@ -101,13 +101,22 @@ cp frontend/.env.example frontend/.env
 # Change any values if necessary
 ```
 
-2. **Start all services**:
+2. **Install project dependencies**:
+
+```bash
+cd backend/
+npm ci
+cd ../frontend/
+npm ci
+```
+
+3. **Start all services**:
 
    ```bash
-   docker compose up -p exchange-rate-app -d --build
+   docker compose -p exchange-rate-app up -d --build
    ```
 
-3. **Access the application**:
+4. **Access the application**:
 
    - Frontend: http://localhost:5173
    - Backend API: http://localhost:3000
@@ -115,9 +124,6 @@ cp frontend/.env.example frontend/.env
    ```bash
    # Backend health
    curl http://localhost:3000/exchange-rates/health
-
-   # Frontend accessibility
-   curl http://localhost:5173
    ```
 
 ## Build and Deployment
