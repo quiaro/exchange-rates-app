@@ -126,28 +126,24 @@ npm ci
    curl http://localhost:3000/exchange-rates/health
    ```
 
-## Build and Deployment
-
-### Docker Deployment (Recommended)
-
-**Full Stack Deployment**:
+5. **View logs**
 
 ```bash
-# Build and start all services
-docker compose -p exchange-rate-app up -d --build
-
 # View logs
 docker compose logs -f
 
 # View logs for specific service:
 docker compose logs -f backend
 docker compose logs -f frontend
+```
 
-# Stop services
+6. **Stop all services**
+
+```bash
 docker compose -p exchange-rate-app down
 ```
 
-**Individual Service Deployment**:
+## Build and Deploy Individual Services
 
 ```bash
 # Backend only
@@ -179,16 +175,6 @@ npm run start:dev
 cd frontend
 npm ci
 npm run dev
-```
-
-**Full Development Stack**:
-
-```bash
-# Terminal 1 - Backend
-cd backend && npm run start:dev
-
-# Terminal 2 - Frontend
-cd frontend && npm run dev
 ```
 
 ## Backend API Endpoints
