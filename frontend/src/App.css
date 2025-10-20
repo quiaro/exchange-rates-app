@@ -1,0 +1,95 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.dashboard-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  min-height: 200px;
+  flex: 1;
+  min-width: 360px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel > .title {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.last-update {
+  color: #666;
+  font-size: 0.875rem;
+  text-align: left;
+  margin: 0;
+}
+
+.panel.eth-usdc,
+.panel.eth-usdt,
+.panel.eth-btc {
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 3rem;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dashboard-container {
+    gap: 1rem;
+  }
+
+  .panel.eth-usdc,
+  .panel.eth-usdt,
+  .panel.eth-btc {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.connection-status {
+  text-align: left;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+.connection-status span {
+  color: #666;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0;
+}
