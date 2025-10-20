@@ -83,12 +83,23 @@ This application provides real-time monitoring of Ethereum cryptocurrency exchan
 
 ### Setup
 
-1. **Create environment file**:
+1. **Create environment files**:
 
-   ```bash
-   # Create .env file in backend directory
-   echo "FINNHUB_API_KEY=your_finnhub_api_key_here" > backend/.env
-   ```
+```bash
+# Copy .env.example file in backend directory and rename to .env
+cd backend
+cp backend/.env.example backend/.env
+
+# Provide FINNHUB_API_KEY value in .env file. Change any other values if necessary.
+```
+
+```bash
+# Copy .env.example file in frontend directory and rename to .env
+cd ../frontend
+cp frontend/.env.example frontend/.env
+
+# Change any values if necessary
+```
 
 2. **Start all services**:
 
